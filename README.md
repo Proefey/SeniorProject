@@ -13,7 +13,7 @@ Harvard Magic Wand Dataset Creation Website: https://tinyml.seas.harvard.edu/mag
 Note: These notebooks are practically the same notebooks used from the previous Hardvard Course, will only minor edits.
 
 
-Report:
+#Report:
 
 Datasets
 There are 3 datasets included in the senior project, 2 of which are custom made:
@@ -41,6 +41,7 @@ Model accuracy and size were both very much tied to the size of the model, some 
 Finally, power consumption has no conclusion. The hardware I was using to test power consumption (YOJOCK USB Tester Multimeter) was reading the same power consumption regardless of model, but the power reading changed by day. The only result I can suspect that it is likely that the model may use around 0.1W to 0.15W and the size of the model is not a determining part of that power consumption. I can suspect this because the models that did not work due to their size had a base power that is 0.1W to 0.15W lower than when the model was working.
 
 It's also worth noting that the number of epochs in the training time did not increase the size of the model, but did increase the accuracy for the alphabet models they were tested on.
+
 Limitations
 Custom Set Limitations
 Creating the alphabet set came with many limitations, most significant of which was that each dataset had to be created using only 1 stroke. This made printing letters much more difficult as they often required more than 1 stroke to complete. I semi-worked around this by using cursive which did allow most letters to be done in one stroke, although letters i, t, j, and x still presented problems. ‘i’ and ‘j’ were worked around by omitting the dot on top, but t and x had to be worked around by just following the two strokes required, even though it ruins the shape.
@@ -50,6 +51,7 @@ Creating enough strokes, it was clear 20 was not enough
 Ensuring that the strokes are different enough from each other, I think this is the main reason why the alphabet database is difficult to train with as letters such as e and i are very similar given the precise nature of the magic wand
 Ensuring that the strokes were big enough. I would recommend standing up whenever you are creating the dataset.
 Ensuring that the strokes could be reset, it was a major problem that the wand accidentally went off. Although the professor did suggest adding a button or some kind, although I can’t test this by the time it's due, I may come back to this.
+
 
 Notebook Limitations
 The only major issue I found with the notebooks is that given a small amount of strokes per class and a lot of classes (Such as alphabet), the number of training datasets and validation datasets would be mismatched, and thus I would often have to re-run the cell under “Take the dataset and shuffle it into the Training/Validation/Test splits” until it worked. I could also change the percentage of Validation sets to help this problem.
