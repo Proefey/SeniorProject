@@ -13,9 +13,12 @@ Harvard Magic Wand Dataset Creation Website: https://tinyml.seas.harvard.edu/mag
 Note: These notebooks are practically the same notebooks used from the previous Hardvard Course, will only minor edits.
 
 
+
 **REPORT:**
 
+
 **Datasets**
+
 There are 3 datasets included in the senior project, 2 of which are custom made:
 Pete’s Digit
 The dataset that the Harvard course uses with the magic wand. Can be found at: 
@@ -27,7 +30,9 @@ Alphabet:
 Including many null characters that allows the player to reset the wand position without using
 The characters are in cursive and the i and j characters do not contain a dot on top of them.
 
+
 **Tests**
+
 For both Pete’s Digit and Left & Right databases, I decided to test a multitude of models with differing number of nodes and number of layers as they are easy to work with and can create accurate models.
 
 However, for the alphabet database, since the classification is likely too complex to ever get a great model, I decided to pivot the alphabet models to test the effect on the number of epochs it has on the model.
@@ -42,7 +47,9 @@ Finally, power consumption has no conclusion. The hardware I was using to test p
 
 It's also worth noting that the number of epochs in the training time did not increase the size of the model, but did increase the accuracy for the alphabet models they were tested on.
 
+
 **Limitations**
+
 Custom Set Limitations
 Creating the alphabet set came with many limitations, most significant of which was that each dataset had to be created using only 1 stroke. This made printing letters much more difficult as they often required more than 1 stroke to complete. I semi-worked around this by using cursive which did allow most letters to be done in one stroke, although letters i, t, j, and x still presented problems. ‘i’ and ‘j’ were worked around by omitting the dot on top, but t and x had to be worked around by just following the two strokes required, even though it ruins the shape.
 
@@ -54,7 +61,10 @@ Ensuring that the strokes could be reset, it was a major problem that the wand a
 
 
 **Notebook Limitations**
+
 The only major issue I found with the notebooks is that given a small amount of strokes per class and a lot of classes (Such as alphabet), the number of training datasets and validation datasets would be mismatched, and thus I would often have to re-run the cell under “Take the dataset and shuffle it into the Training/Validation/Test splits” until it worked. I could also change the percentage of Validation sets to help this problem.
 
+
 **Results**
+
 Overall, using pete’s dataset and the left and right dataset were both fairly successful, although the alphabet one not so much due to its massive size and the amount of time and effort it takes to create the dataset, as well as the similarity of the strokes playing a large factor to its inaccuracies. 
